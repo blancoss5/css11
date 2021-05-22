@@ -1,0 +1,151 @@
+/*            EM          
+
+la unidad de medida de "em" respeta el tamaño de fuente del contexto,de la etiqueta padre directo
+o de la etiqueta mas cercana
+    1em - 16px por defecto
+    1em - 1(25px) (heredado del padre)
+
+       REM         
+ respeta el tamaño fuente de la raiz
+ 1 rem - 1(25px) (heredado del raiz)
+ 1 rem - 16px por defecto
+*/
+*{
+    box-sizing: border-box;
+    /*para que no haya desbordamiento*/
+}
+
+html{
+    font-size: 20px; /*raiz*/
+}
+
+p{
+    margin: .5rem;
+    font-size: 1rem;  /*font-size: 50px;*/
+
+}
+/*   2em(padre)      =       1em(hijo)
+    el hijo siempre manejara el tamaño del padre como 1em
+
+
+*/
+span{
+    font-size: 1rem; /*font-size: 50px;*/
+}
+li{
+    font-size: 1.5rem;
+}
+/*
+        ALINEACION DE TEXTO
+text-align: center | right | left | justify
+
+
+
+*/
+.texto{
+    background-color: lightblue;
+    padding: .7rem;
+}
+
+.parrafo{
+    font-size: 1.5rem;
+    line-height: 40px;
+    letter-spacing: 5px;
+    word-spacing: 45px;
+    /*cursor: wait;*/
+    white-space: pre-wrap;
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+}
+img{
+    width: 1rem;
+    height: auto;
+    vertical-align: baseline;
+}
+a{
+    text-decoration: none;
+    text-shadow: 2px 2px 5px red;
+}
+/*          INTERLINEADO
+
+line-height: 40px;
+line-height: 5;
+
+        ALIENADO VERTICAL
+
+vertical-align: top | bottom | baseline 
+
+        SEPARACION    DE  LETRAS
+letter-spacing: px | em | rem
+
+        SEPARACION DE PALABRAS
+word-spacing: px | em | rem
+
+        SUBRAYADOS
+text-decoration: overline (arriba) | none | underline (abajo) | line-through (centro, tachado) 
+
+        SOMBRAS DE TEXTO
+text-shadow: desplazamiento horizontal   desplazamiento vertical   difuminado   color
+
+        ESPACIOS EN GENERAL
+white-space: pre | pre-wrap  (respeta los espacios en blanco) | no-wrap | pre-line
+
+        DESBORDAMIENTO DE TEXTO
+word-break: normal | break-all | keep-all
+word-wrap: normal | break-word
+        RESPETA SU TAMAÑO DE SU CONTENEDOR 
+overflow: hidden;
+"y para las palabras (que muestre 3 puntos)"
+text-overflow: ellipsis;
+*/
+
+.increible{
+    width: 70px;
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+}
+
+/*  ORIENTACION DE TEXTO 
+writing-mode: vertical-lr    (orientacion de izquierda a derecha)
+writing-mode: vertical-rl    (orientacion de derecha a izquierda)
+text-orientation: upright       (acomoda el texto en forma vertical)
+*/
+
+.orientacion1{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    width: 55px;
+    height: 250px;
+    border: 1px solid black;
+}
+
+.orientacion2{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    width: 55px;
+    height: 250px;
+    border: 1px solid black;
+}
+
+/*   MAYUSCULAS - MINUSCULAS
+text-transform: uppercase;   (convierte en mayusculas)
+text-transform: lowercase;   (convierte en minusculas)
+text-transform: capitalize;  (La primera letra lo vuelve mayuscula y los demas minusculas en todas las palabras)
+*/
+
+.mayus{
+    text-transform: uppercase;
+}
+
+.minus{
+    text-transform: lowercase;
+}
+
+.cap{
+    text-transform: capitalize;
+}
